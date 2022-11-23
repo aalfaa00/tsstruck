@@ -1,0 +1,75 @@
+@import '/styles/colors';
+@import 'styles/device';
+
+.container {
+	display: none;
+	cursor: pointer;
+	user-select: none;
+	@include devices(planshet) {
+		display: block;
+	}
+	@include devices(mobile) {
+		display: block;
+	}
+}
+
+.sidebar {
+	top: 0;
+	right: -450px;
+	bottom: 0;
+	z-index: 20;
+	width: 80vw;
+	display: none;
+	height: 100vh;
+	position: fixed;
+	max-width: 400px;
+	transition: 500ms all;
+	flex-direction: column;
+	background-color: #ffffff;
+	transform: translateX(100%);
+	box-shadow: -5px 2px 20px rgba(0, 0, 0, 0.06);
+	@include devices(planshet) {
+		display: flex;
+	}
+	@include devices(mobile) {
+		display: flex;
+	}
+}
+
+.transform {
+	right: 0;
+	transform: translateX(0) !important;
+}
+
+.side {
+	padding: 25px;
+	ul {
+		display: grid;
+		row-gap: 25px;
+		grid-template-columns: 100%;
+		li {
+			font-size: 20px;
+		}
+	}
+}
+
+.wrapclose {
+	display: flex;
+	user-select: none;
+	margin-bottom: 30px;
+	justify-content: flex-end;
+	& > div {
+		padding: 6px;
+		display: flex;
+		cursor: pointer;
+		border-radius: 50%;
+		align-items: center;
+		width: fit-content;
+		height: fit-content;
+		justify-content: center;
+		&:hover {
+			border: 50%;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+	}
+}

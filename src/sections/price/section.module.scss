@@ -1,0 +1,66 @@
+@import '/styles/colors';
+@import 'styles/device';
+
+.container {
+	width: 100%;
+	display: flex;
+	padding: 120px 0;
+	align-items: center;
+	flex-direction: column;
+	@include devices(mobile) {
+		padding: 65px 25px 100px;
+	}
+	@include devices(planshet) {
+		padding: 65px 25px 100px;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	max-width: 1200px;
+	align-items: center;
+	flex-direction: column;
+}
+
+.header {
+	h3 {
+		font-size: 40px;
+		color: $black20;
+		font-weight: 700;
+		text-align: center;
+		letter-spacing: -0.03em;
+	}
+	p {
+		color: $gray20;
+		font-size: 20px;
+		font-weight: 400;
+		margin: 24px 0;
+		text-align: center;
+		letter-spacing: -0.02em;
+	}
+	@include devices(mobile) {
+		p {
+			margin: 10px 0 30px;
+			font-size: 14.6347px;
+		}
+		h3 {
+			font-size: 25.088px;
+		}
+	}
+}
+
+.cardscontainer {
+	width: 100%;
+	display: grid;
+	margin-top: 30px;
+	column-gap: 24px;
+	grid-template-columns: 1fr 1fr 1fr;
+	@include devices(mobile) {
+		row-gap: 30px;
+		grid-template-columns: 100%;
+	}
+	@include devices(planshet) {
+		column-gap: 14px;
+	}
+}

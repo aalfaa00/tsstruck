@@ -1,0 +1,60 @@
+@import '/styles/colors';
+
+.container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	padding: 32px;
+	border-radius: 12px;
+	flex-direction: column;
+	background-color: $black30;
+	justify-content: space-between;
+}
+
+.wrapper {
+	display: flex;
+	padding-bottom: 24px;
+	flex-direction: column;
+	h6 {
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 16px;
+		letter-spacing: -0.02em;
+	}
+	p {
+		color: $white;
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: -0.02em;
+	}
+}
+
+.wrapuser {
+	display: flex;
+	padding-top: 24px;
+	align-items: center;
+	border-top: 1px solid $gray30;
+}
+
+.wrapimage {
+	width: 70px;
+	height: 70px;
+	margin-right: 24px;
+}
+
+.user {
+	h3 {
+		font-size: 18px;
+		font-weight: 700;
+		color: #ffffff;
+		margin-bottom: 5px;
+		letter-spacing: -0.03em;
+	}
+	h4 {
+		color: $gray60;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: -0.02em;
+	}
+}

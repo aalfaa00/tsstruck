@@ -1,0 +1,38 @@
+@import 'styles/device';
+
+.container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 100px 0 65px;
+	justify-content: center;
+	ul {
+		width: 100%;
+		display: grid;
+		max-width: 1200px;
+		justify-items: center;
+		grid-template-columns: repeat(5, auto);
+	}
+	@include devices(mobile) {
+		padding: 30px 0 30px 25px;
+		ul {
+			overflow-x: auto;
+			&::-webkit-scrollbar-thumb {
+				background-color: transparent;
+			}
+			&::-webkit-scrollbar {
+				background-color: transparent;
+			}
+			&::-webkit-scrollbar-track {
+				background-color: transparent;
+			}
+
+			li {
+				svg {
+					width: 130px;
+					height: 22px;
+				}
+			}
+		}
+	}
+}

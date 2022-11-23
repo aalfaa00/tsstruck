@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: local('Outfit'), url('/fonts/Outfit-Regular.woff') format('woff');
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: 'Outfit' !important;
+	scroll-behavior: smooth;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+#__next,
+body {
+	overflow: hidden;
+}

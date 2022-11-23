@@ -1,0 +1,40 @@
+@import '/styles/colors';
+@import 'styles/device';
+
+.container {
+	display: flex;
+	align-items: center;
+	nav {
+		margin-right: 65px;
+		ul {
+			display: grid;
+			column-gap: 35px;
+			grid-template-columns: repeat(5, auto);
+			li {
+				a {
+					font-weight: 500;
+					font-size: 18px;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+	@include devices(planshet) {
+		display: none;
+	}
+	@include devices(mobile) {
+		display: none;
+	}
+}
+
+.button {
+	display: flex;
+	font-size: 18px;
+	font-weight: 400;
+	color: $main-color;
+	padding: 10px 20px;
+	align-items: center;
+	justify-self: center;
+	background: #ffffff;
+	border-radius: 10000px;
+}
